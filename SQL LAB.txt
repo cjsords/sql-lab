@@ -1,0 +1,35 @@
+1. select * from customers;
+
+2. select distinct * country from customers
+
+3. select * from customers where customer_id like 'BL%';
+
+4. select * from orders limit 100;
+
+5. select * from customers where postal_code = '1010' or postal_code = '3012' or postal_code = '12209' or postal_code = '05023';
+
+6. select * from orders where ship_region is not null;
+
+7. select * from customers order by country, city;
+
+8. insert into customers (customer_id, company_name, contact_name) values ('ABCDEF', 'company', 'Colin');
+
+9. update orders set ship_region='EuroZone' where ship_country = 'France';
+
+10. delete from order_details where quantity=1;
+
+11. select avg(quantity), max(quantity), min(quantity) from order_details;
+
+12. select avg(quantity), max(quantity), min(quantity) from order_details group by order_id;
+
+13. select customer_id from orders where order_id =10290;
+
+14. SELECT * FROM customers LEFT JOIN orders ON customers.customer_id = orders.customer_id;
+
+SELECT * FROM customers RIGHT JOIN orders ON customers.customer_id = orders.customer_id;
+
+SELECT * FROM customers INNER JOIN orders ON customers.customer_id = orders.customer_id;
+
+15. select first_name from employees where reports_to is null;
+
+16. select first_name from employees where reports_to = 2;
